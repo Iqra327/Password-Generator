@@ -1,0 +1,23 @@
+body{
+  padding-top: 20px;
+}
+.main-container{
+  width: 300px;
+  border: 1px solid;
+  font-family: sans-serif;
+  background-color:bisque;
+  color: white;
+  box-shadow: 7px 7px 4px 0px gray;
+}
+.checkbox-input{
+  margin-left: auto;
+}
+.div-pass-check{
+  text-align: center !important;
+  justify-content: center;
+}
+.btn-generate-psw{
+  background-color: rgb(34, 112, 148);
+  color: white;
+  border-radius: 5px;
+}
