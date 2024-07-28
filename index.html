@@ -10,29 +10,41 @@
   <script defer src="script.js"></script>
 </head>
 <body>
-  <div class="main-container mx-auto px-4 py-3 rounded">
-    <p class="fw-bold fs-5 pb-0 mb-0">Password Generator</p>
-    <input type="text" class="w-100 border-0 mb-1 mt-2 p-1" style="border-radius: 3px;">
-    <input type="range" class="w-100 border-0">
-    <p class="fw-bold d-inline">Password Length</p>
-    <p class="d-inline pass-length">8</p>
+  <div class="main-container px-4 py-3 rounded">
+    <p class="fw-bold fs-5 pb-0 mb-0">
+      Password Generator
+    </p>
+    <input type="text" class="w-100 border-0 mb-1 mt-2 p-1 bg-white" style="border-radius: 3px;" disabled>
+    <input type="range" class="w-100 border-0" min="8" max="30" value="8">
     <div class="d-flex">
-      <p>Include Lowercase Letters(a-z)</p>
-      <input type="checkbox" class="checkbox-input">
+      <p class="fw-bold flex-grow-1">
+        Password Length
+      </p>
+      <span>8</span>
     </div>
-    <div class="d-flex div-pass-check">
-      <p>Include Uppercase Letters(A-Z)</p>
-      <input type="checkbox" class="checkbox-input">
+    
+    <div class="d-flex mb-2">
+      <label for="lowecase" class="flex-grow-1">Include Lowercase Letters(a-z)</label>
+      <input type="checkbox" name="lowecase" id="lowecase"class="checkbox-input">
     </div>
-    <div class="d-flex">
-      <p>Include Numbers(0-9)</p>
-      <input type="checkbox" class="checkbox-input">
+
+    <div class="d-flex mb-2">
+      <label for="uppercase" class="flex-grow-1">Include Uppercase Letters(A-Z)</label>
+      <input type="checkbox" name="uppercase" id="uppercase" class="checkbox-input">
     </div>
-    <div class="d-flex">
-      <p>Include Symbols(@-/)</p>
-      <input type="checkbox" class="checkbox-input">
+
+    <div class="d-flex mb-2">
+      <label for="numbers" class="flex-grow-1">Include Numbers(0-9)</label>
+      <input type="checkbox" name="numbers" id="numbers"  class="checkbox-input">
     </div>
-    <button class="w-100 p-2 border-0 btn-generate-psw ">Generate Password</button>
+
+    <div class="d-flex mb-3">
+      <label for="symbols" class="flex-grow-1">Include Symbols(@-/)</label>
+      <input type="checkbox" name="symbols" id="symbols" class="checkbox-input">
+    </div>
+    <button class="w-100 p-2 fw-bold border-0 btn-generate-psw ">
+      Generate Password
+    </button>
     
     
     <p></p>
