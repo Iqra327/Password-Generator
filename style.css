@@ -28,7 +28,7 @@ body{
 }
 input[type="checkbox"], 
 input[type="range"], 
-label{
+label, .icon-copy-tick{
   cursor: pointer;
 }
 input[type="checkbox"]{
@@ -38,4 +38,14 @@ input[type="checkbox"]{
 }
 input[type="range"]{
   accent-color: #e8b62d;
+}
+/* .icon-copy-tick{
+  top: 16px;
+  left: 235px;
+} */
+.div-input-ions{
+  border-radius : 3px;
+}
+.tick-icon{
+  display: none;
 }

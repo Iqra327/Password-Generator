@@ -1,12 +1,13 @@
-export const inputRange = document.getElementById('inputSlider');
-export const rangeValue = document.getElementById('sliderValue');
+const inputRange = document.getElementById('inputSlider');
+const rangeValue = document.getElementById('sliderValue');
 const generateBtn = document.getElementById('js-btn-genPsw')
 const inputBox = document.getElementById('passBox');
 const lowerCase = document.getElementById('lowercase');
 const upperCase = document.getElementById('uppercase');
 const numbers = document.getElementById('numbers');
 const symbols = document.getElementById('symbols');
-
+const copyIcon = document.getElementById('js-copy-icon');
+const tickIcon = document.getElementById('js-tick-icon');
 
 rangeValue.textContent = inputRange.value;
 inputRange.addEventListener('input', () => {
@@ -14,14 +15,16 @@ inputRange.addEventListener('input', () => {
 });
 
 generateBtn.addEventListener('click', () => {
-  inputBox.value = generatePassword(); 
+  inputBox.value = generatePassword();
+  if(inputBox.value != ""){
+    copyIcon.title = "";
+  }
 });
 
 const lowerChars = 'abcdefghijklmnopqrstuvwxyz';
 const upperChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const allNumbers = '0123456789';
 const allSymbols = '!@#$%^&*';
-
 
 function generatePassword(){
   let passStorage = '';
@@ -42,3 +45,19 @@ function generatePassword(){
   return passStorage;
 }
 
+copyIcon.addEventListener('click', () => {
+  if(inputBox.value !== "" || inputBox.value.length >=1){
+    console.log(navigator.clipboard.writeText(inputBox.value));
+    tickIcon.title = "Copied!";
+    tickIcon.style.display = "block";
+    copyIcon.style.display = "none";
+  }else{
+    copyIcon.title = "Please Generate Password To Copy!"
+  };
+
+  setTimeout(() => {
+    tickIcon.style.display = "none";
+    tickIcon.title = "";
+    copyIcon.style.display = "block";   
+  }, 2000);
+})
