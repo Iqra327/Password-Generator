@@ -17,11 +17,14 @@ body{
 }
 .btn-generate-psw{
   background-color: #013e27;
+  transition: 0.3s ease-in-out;
   color: white;
   border-radius: 5px;
 }
 .btn-generate-psw:hover{
-  background-color:#013e27
+  background: #f5c234 ;
+  transition: 0.3s ease-in-out;
+  color:#013e27 !important;
 }
 input[type="checkbox"], 
 input[type="range"], 
@@ -31,6 +34,7 @@ label{
 input[type="checkbox"]{
   width: 18px;
   height: 18px;
+  accent-color: #013e27;
 }
 input[type="range"]{
   accent-color: #e8b62d;

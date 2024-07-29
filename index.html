@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Password Generator</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap-grid.min.css" integrity="sha512-i1b/nzkVo97VN5WbEtaPebBG8REvjWeqNclJ6AItj7msdVcaveKrlIIByDpvjk5nwHjXkIqGZscVxOrTb9tsMA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
@@ -14,35 +14,39 @@
     <p class="fw-bold fs-5 pb-0 mb-0">
       Password Generator
     </p>
-    <input type="text" class="w-100 border-0 mb-1 mt-2 p-1 bg-white" style="border-radius: 3px;" disabled>
-    <input type="range" class="w-100 border-0" min="8" max="30" value="8">
+    
+    <input type="text" id="passBox" class="w-100 border-0 mb-1 mt-2 p-1 bg-white pass-box" style="border-radius: 3px;" disabled>
+    
+    <input type="range" class="w-100 border-0" min="4" max="30" value="4" id="inputSlider">
+    
     <div class="d-flex">
       <p class="fw-bold flex-grow-1">
         Password Length
       </p>
-      <span>8</span>
+      <span id="sliderValue"></span>
     </div>
     
     <div class="d-flex mb-2">
-      <label for="lowecase" class="flex-grow-1">Include Lowercase Letters(a-z)</label>
-      <input type="checkbox" name="lowecase" id="lowecase"class="checkbox-input">
+      <label for="lowercase" class="flex-grow-1">Include Lowercase Letters(a-z)</label>
+      <input type="checkbox" name="lowercase" id="lowercase"class="checkbox-input" >
     </div>
 
     <div class="d-flex mb-2">
       <label for="uppercase" class="flex-grow-1">Include Uppercase Letters(A-Z)</label>
-      <input type="checkbox" name="uppercase" id="uppercase" class="checkbox-input">
+      <input type="checkbox" name="uppercase" id="uppercase" class="checkbox-input" >
     </div>
 
     <div class="d-flex mb-2">
       <label for="numbers" class="flex-grow-1">Include Numbers(0-9)</label>
-      <input type="checkbox" name="numbers" id="numbers"  class="checkbox-input">
+      <input type="checkbox" name="numbers" id="numbers"  class="checkbox-input" >
     </div>
 
     <div class="d-flex mb-3">
       <label for="symbols" class="flex-grow-1">Include Symbols(@-/)</label>
       <input type="checkbox" name="symbols" id="symbols" class="checkbox-input">
     </div>
-    <button class="w-100 p-2 fw-bold border-0 btn-generate-psw ">
+    
+    <button class="w-100 p-2 fw-bold border-0 btn-generate-psw" id="js-btn-genPsw">
       Generate Password
     </button>
     
@@ -50,7 +54,6 @@
     <p></p>
   </div>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
